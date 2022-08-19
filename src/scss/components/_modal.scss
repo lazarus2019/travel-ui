@@ -1,0 +1,22 @@
+@use '../abstracts';
+
+.modal {
+  @include abstracts.position(fixed, 0, 0, 0, 0, 100%, 100%);
+  background-color: rgba(0 0 0 / 40%);
+  @include abstracts.align(flex, center, center, null);
+  &__heading {
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__body {
+    background-color: abstracts.$white;
+    width: 38rem;
+    height: auto;
+    padding: 2rem;
+    font-size: 1.4rem;
+    @include abstracts.animation(modalAnimate, 0.5s, linear, -10rem, 0);
+  }
+}
