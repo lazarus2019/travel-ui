@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import DestinationInfo from "../components/DestinationInfo";
 import Cities from "../components/cities/Cities";
 import Header from "../components/Header";
+import Footer from "../components/footer/Footer";
 
 function Details() {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ function Details() {
           <Header heading={destination.name} image={destination.bigImage} />
           <DestinationInfo destination={destination} />
           <Cities cities={cities} name={destination.name} />
+          <Footer />
         </>
       ) : (
         ""

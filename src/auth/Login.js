@@ -50,7 +50,7 @@ function Login(props) {
           placeholder="Enter password"
         />
       </div>
-      <div className="group flex space-between y-center">
+      <div className="group modal__row">
         <input type="submit" name="" id="" className="btn-dark" value="Login" />
         <span className='redirect' onClick={clickHandler}>Create new account?</span>
       </div>

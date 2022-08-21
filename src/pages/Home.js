@@ -10,6 +10,8 @@ import { setOpen, setCurrent } from "../redux/features/modalSlice";
 import Destinations from "../components/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
+import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -55,6 +57,8 @@ function Home() {
       <Destinations />
       <Services />
       <Reviews />
+      <Gallery />
+      <Footer />
     </>
   );
 }

@@ -1,23 +1,25 @@
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import assets from "../assets";
 
 function Header({ heading, paragraph, children, image }) {
+  const navigate = useNavigate();
   const [state] = useState({
     video: assets.videos.header,
     poster: assets.images.poster,
     logo: assets.images.logo,
   });
+  const goToHome = () => {
+    navigate("/");
+  };
 
   return (
     <div className="header">
       <div className="container pr">
         <div className="header__logo">
-          <Link to="/">
-            <img src={state.logo} alt="Logo" />
-          </Link>
+          <LazyLoadImage src={state.logo} alt="Logo" onClick={goToHome} />
         </div>
       </div>
       <div className="header__video">

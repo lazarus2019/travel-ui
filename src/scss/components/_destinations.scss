@@ -2,6 +2,9 @@
 
 .destinations {
   margin: 8rem 0;
+      @include responsive(large) {
+      margin: 4rem 0;
+    }
   &__heading {
     font-size: 2.8rem;
     color: $black;
@@ -9,6 +12,14 @@
     width: 60%;
     line-height: 4rem;
     position: relative;
+    @include responsive(large) {
+      width: 100%;
+    }
+    @include responsive(xsmall) {
+      font-size: 2.1rem;
+      line-height: 3.5rem;
+      text-transform: capitalize;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -17,6 +28,9 @@
       width: 40%;
       height: 0.2rem;
       background-color: $main1;
+      @include responsive(large) {
+        width: 50%;
+      }
     }
   }
   &__paragraph {
@@ -27,6 +41,9 @@
   }
   &__block {
     margin-top: 6rem;
+    @include responsive(xsmall){
+      margin-top: 3rem;
+    }
   }
   &__card {
     width: 100%;
@@ -57,7 +74,7 @@
           margin-left: 0.4rem;
         }
       }
-    } 
+    }
     &__info {
       @include position(absolute, 0, 0, 0, 0, 100%, 100%);
       @include align(flex, center, center, null);

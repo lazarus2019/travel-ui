@@ -5,7 +5,7 @@ import ServicesLeft from "./ServicesLeft";
 import ServicesList from "./ServicesList";
 
 function Services() {
-  const servicesData = useSelector((state) => state.service.all);
+  const servicesData = useSelector((state) => state.share.services);
   const [state] = useState({
     heading:
       "why customers love travel friends? because we provide unique services.",

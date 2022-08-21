@@ -1,22 +1,42 @@
-@use '../abstracts';
+@use '../abstracts' as *;
 
 .modal {
-  @include abstracts.position(fixed, 0, 0, 0, 0, 100%, 100%);
+  @include position(fixed, 0, 0, 0, 0, 100%, 100%);
   background-color: rgba(0 0 0 / 40%);
-  @include abstracts.align(flex, center, center, null);
+  @include align(flex, center, center, null);
   &__heading {
     h3 {
       font-size: 2rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
+      @include responsive(xsmall) {
+        font-size: 1.7rem;
+      }
     }
   }
   &__body {
-    background-color: abstracts.$white;
+    background-color: $white;
     width: 38rem;
     height: auto;
     padding: 2rem;
     font-size: 1.4rem;
-    @include abstracts.animation(modalAnimate, 0.5s, linear, -10rem, 0);
+    @include animation(modalAnimate, 0.5s, linear, -10rem, 0);
+    @include responsive(xsmall) {
+      width: 100%;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(xsmall) {
+      flex-direction: column;
+      span {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
   }
 }

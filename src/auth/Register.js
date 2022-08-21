@@ -72,7 +72,7 @@ function Register(props) {
           placeholder="Confirm password"
         />
       </div>
-      <div className="group flex space-between y-center">
+      <div className="group modal__row">
         <input type="submit" className="btn-dark" value="Register" />
         <span className="redirect" onClick={clickHandler}>
           Already have an account?
